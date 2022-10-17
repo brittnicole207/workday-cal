@@ -6,4 +6,4 @@ Current hours are red.
 
 Future hours are green. 
 
-<img>deployedapp.png</img>
+<img>/assets/deployed-app.png</img>
