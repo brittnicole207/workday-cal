@@ -6,7 +6,7 @@ $('#currentDate').text(currentDate);
 const localTime = moment().format('HH');
 console.log(localTime);
 
-//save when refreshed
+//When the user clicks the button, it will save the information
 $('.saveBtn').on
 
 // Display today's day and date
@@ -24,29 +24,29 @@ $(document).ready(function () {
         localStorage.setItem(time, text);
     })
    
+//This tracks the current time and returns it in moment
     function timeTracker() {
-        //get current number of hours.
         let timeNow = moment().hour();
 
-        // loop over time blocks
+        // This is a loop that will look at the schedule and the time and present the correct class based on the schedule hour and the current time. 
         $(".time-block").each(function () {
-            let blockTime = parseInt($(this).attr("id").split("hour")[1]);
+            let scheduleHour = parseInt($(this).attr("id").split("hour")[1]);
 
             // To check the time and add the classes for background indicators
-            if (blockTime < timeNow) {
-                $(this).removeClass("future");
-                $(this).removeClass("present");
-                $(this).addClass("past");
+            if (scheduleHour < timeNow) {
+                $(this).removeClass("upcoming");
+                $(this).removeClass("current");
+                $(this).addClass("former");
             }
-            else if (blockTime === timeNow) {
-                $(this).removeClass("past");
-                $(this).removeClass("future");
-                $(this).addClass("present");
+            else if (scheduleHour === timeNow) {
+                $(this).removeClass("former");
+                $(this).removeClass("upcoming");
+                $(this).addClass("current");
             }
             else {
-                $(this).removeClass("present");
-                $(this).removeClass("past");
-                $(this).addClass("future");
+                $(this).removeClass("current");
+                $(this).removeClass("former");
+                $(this).addClass("upcoming");
 
             }
         })
@@ -64,5 +64,5 @@ $(document).ready(function () {
     $("#hour16 .description").val(localStorage.getItem("hour16"));
     $("#hour17 .description").val(localStorage.getItem("hour17"));
 
-    timeTracker();
+    timeTracker(); //Runs the time tracker function 
 })
