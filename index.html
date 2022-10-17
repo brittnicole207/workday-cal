@@ -19,12 +19,12 @@
   <!--Header-->
   <header class="jumbotron"> <!--Using Bootstrap Format-->
     <h1 class="display-3">Work Day Scheduler</h1>
-    <p class="lead">This calendar will allow you to schedule your work day with a minimialistic style so you can focus on what matters.</p>
+    <p class="lead">This minimalistic calendar will allow you to schedule your work day - so you can focus on what matters.</p>
     <p id="currentDate" class="lead"><!--Current Date Goes Here--></p>
       <div class="key-div">
-        <p><span class="present">RED</span> is current </p>
-        <p><span class="future">GREEN</span> is upcoming </p>
-        <p><span class="past">GREY</span> is upcoming </p>
+        <p><span class="current">RED</span> is current </p>
+        <p><span class="upcoming">GREEN</span> is upcoming TEST </p>
+        <p><span class="former">GREY</span> is upcoming </p>
       </div>
   </header>
 
@@ -33,7 +33,7 @@
 <div class="container">
   
   <!--Timeblocks start here-->
-  <div id="hour8" class="row time-block past">
+  <div id="hour8" class="row time-block former">
     <div class="col-md-1 hour">
       8 AM
     </div>
@@ -41,7 +41,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour9" class="row time-block past">
+  <div id="hour9" class="row time-block former">
     <div class="col-md-1 hour">
       9 AM
     </div>
@@ -49,7 +49,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour10" class="row time-block past">
+  <div id="hour10" class="row time-block former">
     <div class="col-md-1 hour">
     10 AM
     </div>
@@ -57,7 +57,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour11" class="row time-block past">
+  <div id="hour11" class="row time-block former">
     <div class="col-md-1 hour">
     11 AM
     </div>
@@ -65,7 +65,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour12" class="row time-block past">
+  <div id="hour12" class="row time-block former">
     <div class="col-md-1 hour">
     12 PM
     </div>
@@ -73,7 +73,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour13" class="row time-block past">
+  <div id="hour13" class="row time-block former">
     <div class="col-md-1 hour">
     1 PM
     </div>
@@ -81,7 +81,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour14" class="row time-block past">
+  <div id="hour14" class="row time-block former">
     <div class="col-md-1 hour">
       2 PM
     </div>
@@ -89,7 +89,7 @@
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
   </div>
 
-  <div id="hour15" class="row time-block past">
+  <div id="hour15" class="row time-block former">
     <div class="col-md-1 hour">
       3 PM
     </div>
@@ -112,10 +112,11 @@
     <textarea class="col-md-10 description">            </textarea>
     <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
 </div>
+</div> 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
 <script src="./assets/js/script.js"></script>
 
-</body>
+    </body>
 </html>
